@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="aboutstyles.css">
+</head>
+<body>
+    <header>
+        <h1>The Association Between Systemic Inflammation and Balance Function in the U.S. Adult Population</h1>
+    </header>
+
+     <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="data.html">Data</a></li>
+            <li><a href="About.html">About</a></li>
+        </ul>
+    </nav>
+
+     <h1>Authors</h1>
+    <!-- add image -->
+     <div class="flex-container">
+        <div class="author-card">
+            <img src="headshot2.jpg" height="250px" width="250px">
+            <p>Shubh Sethia</p>
+        </div>
+        <div class="author-card"><a href="https://www.juniata.edu/academics/provost/bio.php?id=ahe100">
+            <img src="heckel-andrew-300-300.jpg" height="250px" width="250px">
+            <p>Andrew Heckel</p>
+       </a></div>
+        <div class="author-card"><a href="https://www.juniata.edu/academics/provost/bio.php?id=Stylianides">
+            <img src="stylianides-georgios-150-150-2.jpg" height="250px" width="250px">
+            <p>Georgios Styliandies</p>
+        </a></div>
+    </div>
+
+    <section id="form-page" class="page-container"> 
+        <div class="card">
+            <h2>📝 Inquiries</h2>
+            <form id="Inquiries">
+                <div class="form-content">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" name="phone">
+
+                    <label for="subject">Subject:</label>
+                    <input type="text" id="subject" name="subject" required>
+
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+
+                    <div id="error-message" class="hidden">
+                        <!-- Errors will be injected here by JavaScript -->
+                    </div>
+                    <button type="submit" id="button button-primary">submit</button>
+                </div>
+            </form>
+            
+        </div>
+    </section>
+
+     <section id="thank-you-page" class="page-container hidden">
+        <div class="card card-centered">
+            <svg class="icon-success" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+            
+            <h1>Thank You!</h1>
+            
+            
+            <!-- This message will be set by our if/else function -->
+            <p id="special-message"></p>
+            <button id="go-back-button" class="button button-secondary">
+                Return
+            </button>
+        </div>
+    </section>
+
+    <script>
+        // Wait for the document to be fully loaded before running scripts
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // Get all necessary elements from the DOM
+            const form = document.getElementById('Inquiries');
+            const formPage = document.getElementById('form-page');
+            const thankYouPage = document.getElementById('thank-you-page');
+            const goBackButton = document.getElementById('go-back-button');
+            const errorMessage = document.getElementById('error-message');
+
+           
+            form.addEventListener('submit', (event) => {
+                // Prevent the form from actually submitting (which reloads the page)
+                event.preventDefault();
+                handleFormSubmit();
+            });
+
+            goBackButton.addEventListener('click', () => {
+                showFormPage();
+            });
+
+            function handleFormSubmit() {
+                // Get values from the form
+                const nameInput = document.getElementById('name');
+                const emailInput = document.getElementById('email');
+                const eventSelect = document.getElementById('subject');
+
+                // Clear any old errors
+                showError('');
+
+                if (!validateInput(nameInput.value, emailInput.value)) {
+                    // Stop if validation fails
+                    return;
+                }
+
+                const eventMessage = getSpecialEventMessage(eventSelect.value);
+
+                // Get the human-readable text from the selected option
+                const eventName = eventMessage;
+                
+                // Set the dynamic content on the thank you page
+                document.getElementById('special-message').textContent = eventMessage;
+
+                // Switch the "pages"
+                formPage.classList.add('hidden');
+                thankYouPage.classList.remove('hidden');
+            }
+
+            // Checks if the inputs are valid
+            function validateInput(name, email) {
+                if (name.trim() === '' || email.trim() === '') {
+                    showError('Please fill out both Name and Email fields.');
+                    return false;
+                }
+                // A simple check for email format
+                if (!email.includes('@') || !email.includes('.')) {
+                    showError('Please enter a valid email address.');
+                    return false;
+                }
+                return true;
+            }
+
+            // Provides a dynamic message based on the event type
+            function getSpecialEventMessage(eventType) {
+                if (eventType === 'workshop') {
+                    // Logic for the 'workshop' case
+                    return 'Thank you for your inquiry';
+                } else if (eventType === 'meetup') {
+                    // Logic for the 'meetup' case
+                    return 'We look forward to networking with you. Don\'t forget your business cards!';
+                } else {
+                    // Default logic for all other cases (like 'webinar')
+                    return 'A confirmation email with the event link will be sent to you shortly.';
+                }
+            }
+
+            // A helper function to display error messages
+            function showError(message) {
+                if (message) {
+                    errorMessage.textContent = message;
+                    errorMessage.classList.remove('hidden');
+                } else {
+                    // Hide the error message if the message is empty
+                    errorMessage.textContent = '';
+                    errorMessage.classList.add('hidden');
+                }
+            }
+            // Resets the view to the main form page
+            function showFormPage() {
+                thankYouPage.classList.add('hidden');
+                formPage.classList.remove('hidden');
+                
+                // Reset the form fields for a new entry
+                form.reset();
+            }
+        });
+    </script>
+</body>
+</html>

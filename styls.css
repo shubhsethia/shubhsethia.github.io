@@ -1,0 +1,147 @@
+/*
+ * Color Palette:
+ * Slate Grey":"708b99
+ * Light Blue":"bbdddb
+ * Ghost White":"f4f4f9"
+ * Turf Green":"04724d
+ * Text: "Black":"000000
+ */
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    /* Light, sweet background color */
+    background-color: #f4f4f9; /* Very pale/creamy white */
+    color: #000; /* Dark chocolate for text */
+}
+p {
+    margin-left: 120px;
+    margin-right: 120px;
+}
+
+/* --- Header Section (Minty Fresh) --- */
+header {
+    background-color: #f4f4f9; /* Mint Green */
+    color: #050401;
+    margin: 0;
+    padding: 20px 0;
+    text-align: center;
+    border-bottom: 5px solid #04724d ; /* Hot Pink separator */
+}
+
+header h1 {
+    font-size: 3em;
+    margin-bottom: 5px;
+    letter-spacing: 2px;
+}
+
+/* --- Navigation (Pop of Pink) --- */
+nav {
+    background-color: #04724d; /* Hot Pink */
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: #000; /* Creamy White text */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2em;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #f4f4f9; /* Sunshine Yellow hover effect */
+}
+
+main {
+    padding: 20px;
+    max-width: 1000px;
+    margin: 20px auto;
+}
+
+section {
+    background-color: #c6ddce;
+    padding: 30px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#Intro p {
+    font-size: 1.3em;
+    text-align: center;
+    padding: 15px;
+    background-color: #f4f4f9; /* Mint Green background */
+    border: 3px solid #04724d;
+    border-radius: 10px;
+}
+
+#Intro strong {
+    color: #04724d; /* Hot Pink emphasis */
+}
+
+#PURPOSE p {
+    font-size: 1.3em;
+    text-align: center;
+    padding: 15px;
+    background-color: #f4f4f9; /* Mint Green background */
+    border: 3px solid #04724d;
+    border-radius: 10px;
+}
+
+#PURPOSE strong {
+    color: #04724d; /* Hot Pink emphasis */
+}
+
+#METHODS p {
+    font-size: 1.3em;
+    text-align: center;
+    padding: 15px;
+    background-color: #f4f4f9; /* Mint Green background */
+    border: 3px solid #04724d;
+    border-radius: 10px;
+}
+
+#METHODS strong {
+    color: #04724d; /* Hot Pink emphasis */
+}
+
+#RESULTS p {
+    font-size: 1.3em;
+    text-align: center;
+    padding: 15px;
+    background-color: #f4f4f9; /* Mint Green background */
+    border: 3px solid #04724d;
+    border-radius: 10px;
+}
+
+#RESULTS strong {
+    color: #04724d; /* Hot Pink emphasis */
+}
+
+#CONCLUSION p {
+    font-size: 1.3em;
+    text-align: center;
+    padding: 15px;
+    background-color: #f4f4f9; /* Mint Green background */
+    border: 3px solid #04724d;
+    border-radius: 10px;
+}
+
+#CONCLUSION strong {
+    color: #04724d; /* Hot Pink emphasis */
+}

@@ -1,0 +1,176 @@
+ header {
+    background-color: #f4f4f9; /* Mint Green */
+    color: #050401;
+    margin: 0;
+    padding: 20px 0;
+    text-align: center;
+    border-bottom: 5px solid #04724d ; /* Hot Pink separator */
+}
+
+header h1 {
+    font-size: 3em;
+    margin-bottom: 5px;
+    letter-spacing: 2px;
+}
+
+nav {
+    background-color: #04724d; /* Hot Pink */
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: #000; /* Creamy White text */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2em;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #f4f4f9; /* Sunshine Yellow hover effect */
+}
+
+ 
+.flex-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width:100%;
+    padding: 10px;
+    gap: 10px;
+}
+
+body h1 {
+    text-align: center;
+    width: 100%;
+}
+
+.author-card {
+   width: 250px;
+   border-radius: 8px;
+   padding: 10px;
+   margin: 10px;
+   text-align: center;
+   box-shadow: 0 8px 8px rgba(0,0,0,0.1);
+   background-color: #c6ddce;
+}
+
+.author-card img {
+   width: 100%;
+   height: auto;
+   border-radius: 4px;
+}
+
+.author-card p {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #000;
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+} 
+
+.Inquiries {
+    margin-top: 50px;
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #f4f4f9;
+    border-radius: 5px;
+    max-width: 1000px;
+    margin-left: 160px;
+    margin-right: 160px;
+    background-color: #c6ddce;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.Inquiries p {
+    margin: 5px 0;
+}    
+
+.Inquiries h2 {
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Ensures padding doesn't affect total width */
+}
+textarea {
+    resize: vertical;
+}
+button {
+    background-color: #04724d; /* Blue color for button */
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 15px;
+}
+button:hover {
+    background-color: #708b99;
+}
+.hidden{
+    display: none;
+}
+.icon-success {
+    width: 4rem;
+    height: 4rem;
+    margin-left: auto;
+    margin-right: auto;
+    color: #22c55e;
+}
+
+#thank-you-page h1 {
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+#thank-you-page p {
+    color: #4B2C20;
+    font-size: 1.125rem;
+    margin-bottom: 1rem;
+}
+
+#registered-event-name {
+    color: #4B2C20;
+    font-weight: 600;
+}
+
+#special-message {
+    color: #4B2C20;
+    margin-bottom: 1.5rem;
+    padding: 0.75rem;
+    background-color: #f0f9fa;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+}
