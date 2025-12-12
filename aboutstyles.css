@@ -1,10 +1,10 @@
  header {
-    background-color: #f4f4f9; /* Mint Green */
+    background-color: #f4f4f9; 
     color: #050401;
     margin: 0;
     padding: 20px 0;
     text-align: center;
-    border-bottom: 5px solid #04724d ; /* Hot Pink separator */
+    border-bottom: 5px solid #04724d ; 
 }
 
 header h1 {
@@ -14,7 +14,7 @@ header h1 {
 }
 
 nav {
-    background-color: #04724d; /* Hot Pink */
+    background-color: #04724d; 
     padding: 10px 0;
     text-align: center;
 }
@@ -32,7 +32,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #000; /* Creamy White text */
+    color: #000; 
     text-decoration: none;
     font-weight: bold;
     font-size: 1.2em;
@@ -40,7 +40,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #f4f4f9; /* Sunshine Yellow hover effect */
+    color: #f4f4f9; 
 }
 
  
@@ -121,13 +121,13 @@ textarea {
     margin-top: 5px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    box-sizing: border-box; /* Ensures padding doesn't affect total width */
+    box-sizing: border-box; 
 }
 textarea {
     resize: vertical;
 }
 button {
-    background-color: #04724d; /* Blue color for button */
+    background-color: #04724d; 
     color: white;
     padding: 12px 20px;
     border: none;
@@ -173,4 +173,11 @@ button:hover {
     background-color: #f0f9fa;
     border-radius: 0.5rem;
     font-size: 1rem;
+}
+footer {
+    background-color: #04724d; 
+    color: #f4f4f9; 
+    text-align: center;
+    padding: 15px 0;
+    font-size: 0.9em;
 }
